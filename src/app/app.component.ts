@@ -26,6 +26,8 @@ export class MyApp {
     firebase.initializeApp({
       apiKey: "AIzaSyBU1JE4atR8GZbi0FpUD7srUN-hxmOUUJo",
     authDomain: "ion-recipe-book-56ab1.firebaseapp.com",
+    databaseURL: "https://ion-recipe-book-56ab1.firebaseio.com"
+
   });
   firebase.auth().onAuthStateChanged(user=>{
     if(user){

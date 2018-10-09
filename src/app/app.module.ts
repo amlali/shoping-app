@@ -16,7 +16,10 @@ import{SignupPage} from '../pages/signup/signup'
 import{SigninPage} from '../pages/signin/signin'
 
 import { authService } from "../services/auth";
-import{SlOptionPage} from '../pages/shopping-list/sl-option/sl-option'
+import{SlOptionPage} from '../pages/shopping-list/sl-option/sl-option';
+import {HttpClientModule} from '@angular/common/http';
+import { AuthLocalServer } from '../services/authlocal';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ SlOptionPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,7 +59,9 @@ SlOptionPage
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ShoppingListService,
     recipesService,
-    authService
+    authService,
+    AuthLocalServer
+    
   ]
 })
 export class AppModule {}

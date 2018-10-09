@@ -1,0 +1,73 @@
+{
+    "project_info": {
+      "project_number": "639776457808",
+      "firebase_url": "https://ion-recipe-book-56ab1.firebaseio.com",
+      "project_id": "ion-recipe-book-56ab1",
+      "storage_bucket": "ion-recipe-book-56ab1.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:639776457808:android:6dd19a3be28faac9",
+          "android_client_info": {
+            "package_name": "com.github.cordova_plugin_firebase"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "639776457808-2ak4mt75kac6fselika8fju0pi12gqfn.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCfgRaUHCfSElxp8Xf3Co3x0JsvadNTKgA"
+          }
+        ],
+        "services": {
+          "analytics_service": {
+            "status": 1
+          },
+          "appinvite_service": {
+            "status": 1,
+            "other_platform_oauth_client": []
+          },
+          "ads_service": {
+            "status": 2
+          }
+        }
+      },
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:639776457808:android:764d2cb7da3280eb",
+          "android_client_info": {
+            "package_name": "io.ionic.starter"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "639776457808-2ak4mt75kac6fselika8fju0pi12gqfn.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCfgRaUHCfSElxp8Xf3Co3x0JsvadNTKgA"
+          }
+        ],
+        "services": {
+          "analytics_service": {
+            "status": 1
+          },
+          "appinvite_service": {
+            "status": 1,
+            "other_platform_oauth_client": []
+          },
+          "ads_service": {
+            "status": 2
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
