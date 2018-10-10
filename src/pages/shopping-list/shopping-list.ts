@@ -15,14 +15,14 @@ import { authService } from "../../services/auth";
 })
 export class ShoppingListPage implements OnInit {
   listItems: Ingredient[];
-userEmail:string;
+token:string;
   constructor(private slService: ShoppingListService,
     private popoverCtrl:PopoverController,
   private authServ:authService,private navParam:NavParams,
   private storage:Storage) {}
 ngOnInit(){
-  this.storage.get('email').then((data)=>{
-    this.userEmail=data;
+  this.storage.get('token').then((data)=>{
+    this.token=data;
     });
 
 
@@ -54,6 +54,12 @@ console.log(this.navParam.get('email'));
   onShowOption(event:MouseEvent){
   const option= this.popoverCtrl.create(SlOptionPage);
   option.present({ev:event});
+  let THIS = this;
+
+  console.log("===token before on dismiss========")
+  console.log(this.token)
+
+
   option.onDidDismiss(data=>{
     if(data.action=='load'){
       // this.authServ.getActiveUser().getIdToken()
@@ -77,16 +83,20 @@ console.log(this.navParam.get('email'));
       //     console.log(error)})
       // });
 
-      this.slService.fetchList(this.userEmail).then((list)=>{
+      console.log("===token from inside on dismiss ========")
+      console.log(THIS.token)
+      THIS.slService.fetchList(THIS.token).then((list)=>{
         if(list){
-                this.listItems=(<Ingredient[]>list);
+          console.log('---------------------------->',list);
+          
+                THIS.listItems=(<Ingredient[]>list);
               }
               else{
-                this.listItems=[];
+                THIS.listItems=[];
               }
               console.log('yes');
-      }).catch(()=>{
-        console.log('no');
+      }).catch((e)=>{
+        console.log(e);
 
       });
 
@@ -105,7 +115,8 @@ console.log(this.navParam.get('email'));
 //   error=>{
 //     console.log('no')})
 // });
-this.slService.storeList(this.userEmail).then(()=>{
+console.log(this.token)
+this.slService.storeList(this.token).then(()=>{
   console.log('yes');
   
 }).catch((error)=>{

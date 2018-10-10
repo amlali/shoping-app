@@ -20,6 +20,7 @@ import{SlOptionPage} from '../pages/shopping-list/sl-option/sl-option';
 import {HttpClientModule} from '@angular/common/http';
 import { AuthLocalServer } from '../services/authlocal';
 import { IonicStorageModule } from '@ionic/storage';
+import { Http} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ SlOptionPage
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
+   
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],

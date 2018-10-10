@@ -49,11 +49,14 @@ private authServ:authService,private authLocalServ:AuthLocalServer){}
 
 //     })
 //   }
-storeList(email:string){
-return this.authLocalServ.storeData(email,this.ingredients);
+storeList(token:string){
+
+return this.authLocalServ.storeData(token,this.ingredients);
 }
-fetchList(email:string){
-  return this.authLocalServ.loadData(email);
+fetchList(token:string){
+  console.log("TOKEN FROM ISIDE FETCH LIST =--------------------------");
+  console.log(token)
+  return this.authLocalServ.loadData(token);
 
 }
 
